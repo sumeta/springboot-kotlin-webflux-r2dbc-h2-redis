@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: springboot-hi-redis
+  codec:
+    max-in-memory-size: -1
+  profiles:
+    active: dev
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+  r2dbc:
+    url: r2dbc:pool:h2:mem:///test?options=DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE&connectTimeout=PT10S
+    username: sa
+    password:
+    pool:
+      initial-size: 10
+      max-size: 10
+      max-idle-time: 30m
+      validation-query: "SELECT 1"
+  redis:
+    host: localhost
+    port: 6379
+
