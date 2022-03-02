@@ -1,4 +1,4 @@
-# springboot-kotlin-webflux-r2dbc-h2-template
+# springboot-kotlin-webflux-r2dbc-redis
 Template Project Springboot kotlin Coroutines API
 
 ### Base Project
